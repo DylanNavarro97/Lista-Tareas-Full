@@ -5,7 +5,7 @@ export const Tarea = ({ tarea, tareas, eliminar }) => {
   return (
     <>
       <li className="text-start mb-2 bg-light p-2 text-black rounded-2 d-flex justify-content-between">
-        {tarea}
+        {tarea?.nombre}
         <CloseButton onClick={() => eliminar(tareas, tarea)}/>
       </li>
     </>

@@ -10,7 +10,10 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
     if (tareaIngresada.trim().length > 3){
-      setTareas([...tareas, tareaIngresada]);
+      setTareas([...tareas, {
+        "nombre" : tareaIngresada,
+        "id" : crypto.randomUUID()
+      }]);
       setTareaIngresada("");
     } else {
       alert("Ingresa una tarea válida")
