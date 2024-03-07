@@ -24,8 +24,8 @@ function App() {
     setTareaIngresada(e.target.value);
   };
 
-  let handleClose = (tareas, tarea) => {
-    let tareasFiltradas = tareas.filter((nombre) => nombre !== tarea)
+  let handleClose = (tarea) => {
+    let tareasFiltradas = tareas.filter((tareaAlmacenada) => tareaAlmacenada.id !== tarea.id)
     setTareas(tareasFiltradas)
   }
 
